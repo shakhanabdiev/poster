@@ -1,7 +1,15 @@
 <h1>All Publishers</h1>
 <br>
 <% @posts.each do |post| %>
-    <h3> <%=post.title %> </h3>
-    <p> <%= post.body %>
-    <hr> <br>
+  <div class="card">
+  <div class="card-body">
+    <h3 class="card-title"> <%=post.title %> </h3>
+    <div class="card-text">
+      <p> <%= post.body %>
+    </div>  
+    <br>
+      <%= link_to "Read More", post_path(post), :class=> "btn btn-info"%>
+  </div>
+</div>
+<br>
 <%end%> 
